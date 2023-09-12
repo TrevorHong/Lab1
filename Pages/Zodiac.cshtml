@@ -1,0 +1,20 @@
+﻿@page
+@model Lab1.Pages.ZodiacModel
+@{
+    
+}
+<form method= "post">
+    <div class="form-group">
+        <div>
+        <label asp-for="year" class="control-label">
+            Year:
+        </label>
+        <input asp-for="year" class="form-control"/>
+        </div>
+        <button asp-action="submit" class="btn btn-primary" >Get Zodiac</button>
+        <a asp-action="Index" class="btn btn-success">Clear</a>
+        <h2>@ViewData["Zodiac"]</h2>
+        <h2>@ViewData["Error"]</h2>
+        <img src="@ViewData["Image"]"/>
+    </div>
+</form>
